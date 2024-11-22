@@ -66,7 +66,7 @@ const ConferenceEvent = () => {
         avItems.forEach((item) => {
           if (
             item.quantity > 0 &&
-            !item.some((i) => i.name === item.name && i.type === "av")
+            !items.some((i) => i.name === item.name && i.type === "av")
           ) {
             items.push({ ...item, type: "av"});
           }
@@ -87,8 +87,7 @@ const ConferenceEvent = () => {
 
     const ItemsDisplay = ({ items }) => {
       console.log(items);
-      return 
-      <>
+      return <>
         <div className="display_box1">
           {items.length === 0 && <p>No items selected</p>}
           <table className="table_item_data">
@@ -113,7 +112,7 @@ const ConferenceEvent = () => {
                   <td>
                     {item.type === "meals" || item.numberOfPeople 
                     ? `${item.cost * numberOfPeople}`
-                    : `${item.cst * item.quantity}`}
+                    : `${item.cost * item.quantity}`}
                   </td>
                 </tr>
               ))}

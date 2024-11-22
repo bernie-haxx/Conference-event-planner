@@ -4,7 +4,7 @@
      * 
      * @param image {string} - Image located in assets folder
      * 
-     * @returns {URL} - The absolute path of the image
+     * @returns { string }  - The absolute path of the image as a URI string
      * 
      * @example
      * 

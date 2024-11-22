@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import getImageUrl from './utils/imageUtils.js'
 
 export const avSlice = createSlice({
   name: "av",
   initialState: [
     {
-      img: "../assets/projector.jpg",
+      img: getImageUrl("projector.jpg"),
       name: "Projectors",
       cost: 200,
       quantity: 0,
